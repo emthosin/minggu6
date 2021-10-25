@@ -54,7 +54,8 @@
                         @else
 
                             <a href="/home" class="btn btnwarning">Home</a>
-                            <a href="/students" class="btn btnwarning">CRUD</a>
+                            <a href="/user" class="btn btnwarning">User CRUD</a>
+                            <a href="/students" class="btn btnwarning">Student CRUD</a>
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
