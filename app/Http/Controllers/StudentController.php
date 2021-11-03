@@ -126,4 +126,11 @@ class StudentController extends Controller
         return redirect()->route('students.index');
 
     }
+
+    public function detail($id)
+    {
+        $student = Student::find($id);
+        return view('students.detail', ['student'=>$student]);
+    }
+
 }

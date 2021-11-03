@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-9">
             <div class="card">
                 <div class="card-header">{{ __('STUDENT DATA') }}</div>
 
@@ -47,11 +47,12 @@
                                 <td>{{ $s->kelas->class_name}}</td>
                                 <td>{{ $s->department}}</td>
                                 <td><form action="/students/{{$s->id}}" method="post">
+                                    <a href="/students/{{$s->id}}" class="btn btn-success">View</a>
                                     <a href="/students/{{$s->id}}/edit" class="btn btn-warning">Edit</a>
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" name="delete" class="btn btn-danger">Delete</button>
-                                    <a href="/students/{{$s->id}}" class="btn btn-success">View</a>
+                                    <a href="/students/{{$s->id}}/detail" class="btn btn-info">Score</a>
                                 </form></td>
                             @endforeach
                         </tbody>
