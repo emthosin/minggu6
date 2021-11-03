@@ -15,7 +15,7 @@
                     @endif
 
                     <table class="table table-respponsive table-striped">
-                    <form action="/students" method="post">
+                    <form action="/students" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                         <label for="nim">NIM</label>
@@ -37,16 +37,25 @@
                                 @endforeach
                             </select></br>
                         </div>
+
                         <div class="form-group">
                         <label for="department">Department</label>
                         <input type="text" class="form-control" 
                         required="required" name="department"></br>
                         </div>
+
                         <div class="form-group">
                         <label for="phone_number">Phone Number</label>
                         <input type="text" class="form-control" 
                         required="required" name="phone_number"></br>
                         </div>
+                        
+                        <div class="form-group">
+                        <label for="photo">Profile Photo</label>
+                        <input type="file" class="form-control" required="required" 
+                        name="photo"></br>
+                        </div>
+
                         <button type="submit" name="add" class="btn btn-primary 
                         float-right">Add Data</button>
                         </form>

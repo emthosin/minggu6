@@ -16,6 +16,7 @@
                     
                     <table class="table table-respponsive table-striped">
                         <thead>
+                            <img width="150px" src="{{asset('storage/'.$student->photo)}}"><br><br>
                             <tr><th>ID</th><th>:</th><td>{{ $student->id }}</td></tr>
                             <tr><th>NIM</th><th>:</th><td>{{ $student->nim }}</td></tr>
                             <tr><th>Name</th><th>:</th><td>{{ $student->name }}</td></tr>
