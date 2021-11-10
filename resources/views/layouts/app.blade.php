@@ -54,7 +54,11 @@
                         @else
 
                             <a href="/home" class="btn btnwarning">Home</a>
-                            <a href="/user" class="btn btnwarning">User CRUD</a>
+                            <li class="nav-item">
+                                @can('manage-users')
+                                    <a class="btn btnwarning" href="/user">User Data</a>
+                                @endcan
+                            </li>
                             <a href="/students" class="btn btnwarning">Student CRUD</a>
 
                             <li class="nav-item dropdown">
@@ -64,7 +68,7 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
